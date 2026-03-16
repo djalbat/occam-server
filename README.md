@@ -1,6 +1,6 @@
 # Occam Server
 
-The [Occam](https://github.com/djalbat/occam) IDE's server functionality.
+[Occam](https://github.com/djalbat/occam)'s server side functionality.
 
 ### Contents
 
