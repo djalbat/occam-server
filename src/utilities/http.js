@@ -13,12 +13,13 @@ const { POST_METHOD } = methods,
       { APPLICATION_JSON_CHARSET_UTF_8_CONTENT_TYPE } = contentTypes;
 
 export function post(host, uri, query, json, callback) {
-	const content = JSON.stringify(json),	///
+	const jsonString = JSON.stringify(json),
 				method = POST_METHOD,
 				headers = {
           [ACCEPT_HEADER]: APPLICATION_JSON_CHARSET_UTF_8_CONTENT_TYPE,
           [CONTENT_TYPE_HEADER]: APPLICATION_JSON_CHARSET_UTF_8_CONTENT_TYPE
-        };
+        },
+				content = jsonString;	///
 
 	const request = createRequest(host, uri, query, method, headers, (error, response) => {
 					if (response === null) {
