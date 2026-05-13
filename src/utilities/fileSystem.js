@@ -106,9 +106,10 @@ export function loadRelease(releaseName, projectsDirectoryPath) {
       let json,
           entries;
 
-      const content = readFile(absolutePath);
+      const content = readFile(absolutePath),
+            jsonString = content; ///
 
-      json = JSON.parse(content);
+      json = JSON.parse(jsonString);
 
       ({ entries } = json);
 

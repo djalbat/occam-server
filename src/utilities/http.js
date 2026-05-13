@@ -44,7 +44,9 @@ export function post(host, uri, query, json, callback) {
 						let json = null;
 
 						try {
-							json = JSON.parse(content);
+							const jsonString = content;	///
+
+							json = JSON.parse(jsonString);
 						} catch (error) {}	///
 
 						callback(json);
